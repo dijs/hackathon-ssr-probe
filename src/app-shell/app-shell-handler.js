@@ -10,6 +10,7 @@ import { withGlobalState } from 'react-storefront/router'
  * @param {*} response
  */
 export default function appShellHandler(params, request, response) {
+  response.set('x-moov-shell', true)
   return withGlobalState(request, globalState, {
     loading: true
   })
